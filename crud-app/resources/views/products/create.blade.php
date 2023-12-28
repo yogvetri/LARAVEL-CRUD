@@ -5,13 +5,14 @@
             <hr/>
             <nav class="my-1">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
                     <li class="breadcrumb-item active"> Add New Product</li>
 
                 </ol>
             </nav>
             <div class="col-md-6">
-                <form action="#" method="post">
+                <form action="/products/store" method="post" enctype="multipart/form-data">
+                    @csrf
                     <div class="row mb-3">
                         <div class="col-md-12">
                             <label for="name" class="form-label">Name</label>
