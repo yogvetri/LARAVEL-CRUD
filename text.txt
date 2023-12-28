@@ -1,0 +1,4 @@
+composer create-project laravel/laravel crud-app
+cd crud-app
+php artisan serve
+php artisan make:controller ProductController
