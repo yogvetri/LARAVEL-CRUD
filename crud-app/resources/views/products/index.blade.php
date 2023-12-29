@@ -21,17 +21,19 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($products as $product)
                         <tr>
-                            <td>1.</td>
-                            <td><img src="img/samsung.png" style="width: 50px; height: 50px; object-fit: contain;" alt="Product"></td>
-                            <td><a href="show.html">Samsung</a></td>
-                            <td>25800</td>
-                            <td>20000</td>
+                            <td>{{$loop->iteration}}</td>
+                            <td><img src="products/{{ $product->image }}" style="width: 50px; height: 50px; object-fit: contain;" alt="Product"></td>
+                            <td><a href="products/show">{{$product->name}}</a></td>
+                            <td>Rs.{{$product->mrp}}</td>
+                            <td>Rs.{{$product->price}}</td>
                             <td>
                                 <a href="edit.html" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
                                 <a href="" class="btn btn-danger btn-sm"><i class="bi bi-trash3"></i></a>
                             </td>
                         </tr>
+                        @endforeach
                     </tbody>
                    
                 </table>

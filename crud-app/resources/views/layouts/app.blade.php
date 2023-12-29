@@ -20,6 +20,12 @@
     </nav>
     <div class="container mt-5">
         <div class="row">
+            @if($message=Session::get('success'))
+            <div class="alert alert-success alert-dismissible fade show">
+                <strong>Success </strong>{{$message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert " aria-label="close"></button>
+            </div>
+            @endif
             @yield('main')
 
         </div>
