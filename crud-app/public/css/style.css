@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&family=Teko:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+#card {
+    width: 50em;
+    flex-direction: row;
+    border: 1px solid #f5f2f2cc;
+    box-shadow: 0 1px 1px rgb(0, 0, 0, 0.1);
+}
+
+#card-img {
+    max-width: 50%;
+    margin: auto;
+    padding: 0.5em;
+    border-radius: 0.7em;
+}

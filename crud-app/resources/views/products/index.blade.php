@@ -25,12 +25,12 @@
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td><img src="products/{{ $product->image }}" style="width: 50px; height: 50px; object-fit: contain;" alt="Product"></td>
-                            <td><a href="products/show">{{$product->name}}</a></td>
+                            <td><a href="products/{{$product->id}}/show">{{$product->name}}</a></td>
                             <td>Rs.{{$product->mrp}}</td>
                             <td>Rs.{{$product->price}}</td>
                             <td>
-                                <a href="edit.html" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-danger btn-sm"><i class="bi bi-trash3"></i></a>
+                                <a href="products/{{$product->id}}/edit" class="btn btn-dark btn-sm"><i class="bi bi-pencil-square"></i></a>
+                                <a href="products/{{$product->id}}/delete" onclick="return confirm('Are you sure want to Delete?')"  class="btn btn-danger btn-sm"><i class="bi bi-trash3"></i></a>
                             </td>
                         </tr>
                         @endforeach
